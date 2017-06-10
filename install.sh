@@ -1,10 +1,10 @@
 #!/bin/bash
 
-
 # execute apt-get -y update just once
 FULLINSTALL=true
 export FULLINSTALL
 
+# option "-y" stands for "assume-yes" in case of interactive questions
 apt-get -y update
 
 INSTALL_ROOT_DIR=$(pwd)
