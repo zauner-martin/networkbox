@@ -10,7 +10,10 @@ apt-get -y update
 INSTALL_ROOT_DIR=$(pwd)
 
 cd hostname_static-ip
-/bin/bash install-hostname_and_static_ip.sh
+
+#as /bin/bash is standard shell in ubuntu a short version of /bin/bash would be ./
+./install-hostname_and_static_ip.sh
+
 cd $INSTALL_ROOT_DIR
 
 cd bind
