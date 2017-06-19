@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # execute apt-get -y update just once
-FULLINSTALL=true
-export FULLINSTALL
+export FULLINSTALL=true
 
 # option "-y" stands for "assume-yes" in case of interactive questions
 apt-get -y update
 
-INSTALL_ROOT_DIR=$(pwd)
+# use the output of pwd to set the variable INSTALL_ROOT_DIR (command substitution)  
+INSTALL_ROOT_DIR=`pwd`
 
 cd hostname_static-ip
 
